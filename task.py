@@ -1,8 +1,7 @@
 import json
-example_array = ['Name : Title', 'Name : First Name', 'Name : Middle Name', 'Name : Last Name', 'Name : Full Name']
 
 
-def read_json(file_name):
+def read_json(file_name, example_array):
     with open(file_name, 'r') as f:
         data = f.read().splitlines()
         result_array = []
