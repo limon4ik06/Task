@@ -1,5 +1,5 @@
 from task import read_json
-example_array = ['Name : Title', 'Name : First Name', 'Name : Middle Name', 'Name : Last Name', 'Name : Full Name']
+example_array = ['Phone : Number', 'Name : Title', 'Name : First Name', 'Name : Middle Name', 'Name : Last Name', 'Name : Full Name']
 
 if __name__ == "__main__":
     file_name = input()
