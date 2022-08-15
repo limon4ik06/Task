@@ -16,19 +16,12 @@ def read_json(file_name, example_array):
                     answer = data['peer_response_with_source']['Payload']['All Categories']['Answers']
                     result_array.append(f'"{i[0]}"')
                     for name in answer[0]['Answer']:
-                        try:
-                            if name['Key'] == example_array[1]:
-                                result_array.append(f'"{name["Value"]}"')
-                            elif name['Key'] == example_array[2]:
-                                result_array.append(f'"{name["Value"]}"')
-                            elif name['Key'] == example_array[3]:
-                                result_array.append(f'"{name["Value"]}"')
-                            elif name['Key'] == example_array[4]:
-                                result_array.append(f'"{name["Value"]}"')
-                            elif name['Key'] == example_array[5]:
-                                result_array.append(f'"{name["Value"]}"')
-                        except KeyError:
-                            result_array.append('" "')
+                        for ex_data in example_array:
+                            try:
+                                if name['Key'] == ex_data:
+                                    result_array.append(f'"{name["Value"]}"')
+                            except KeyError:
+                                result_array.append('" "')
                 except KeyError:
                     continue
 
